@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velaris Encantado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom font classes since we can't use external CSS */
+      .font-fantasy-title { font-family: 'Dancing Script', cursive; }
+      .font-fantasy-header { font-family: 'Cinzel', serif; }
+      .font-body { font-family: 'Lato', sans-serif; }
+      
+      /* Star animation utilities */
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      .animate-twinkle {
+        animation: twinkle 3s infinite ease-in-out;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'night-dark': '#0f172a', // Slate 900
+              'night-deep': '#020617', // Slate 950
+              'night-blue': '#1e1b4b', // Indigo 950
+              'star-silver': '#cbd5e1', // Slate 300
+              'magic-purple': '#7e22ce', // Purple 700
+              'magic-glow': '#d8b4fe', // Purple 200
+            },
+            fontFamily: {
+              'fantasy': ['Dancing Script', 'cursive'],
+              'header': ['Cinzel', 'serif'],
+              'body': ['Lato', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-night-deep text-star-silver overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
