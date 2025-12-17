@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Users, PartyPopper } from 'lucide-react';
+import { Users, PartyPopper } from 'lucide-react';
 import { ReservationFormData } from '../types';
 
 const Reservations: React.FC = () => {
